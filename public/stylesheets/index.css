@@ -1,0 +1,121 @@
+.title, .end-info {
+  text-align: center;
+}
+
+
+.end-info {
+  margin-top: 20px;
+}
+
+html{
+  margin:0;
+  padding:0;
+  max-height:100vh;
+}
+.entire-wrapper {
+  background: rgb(214, 245, 197);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.button_div {
+  text-align: center;
+  margin-top: 50px;
+  font-family: 'Nunito', sans-serif;
+}
+
+.submit, .see_list {
+  font-size: 20px;
+}
+
+i.submit-para {
+  font-size: 15px;
+  font-style: normal;
+}
+
+.info {
+  margin-top: 40px;
+  text-align: justify;
+  width: 40%;
+  margin-left: 30%;
+  line-height: 30px;
+  font-family: 'Nunito', sans-serif;
+}
+
+.first_button, .second_button {
+  margin: 20px;
+  height: 60px;
+  width: 130px;
+  font-size: 15px;
+}
+
+.title-text {
+  font-size: 30px;
+  padding-top: 30px;
+  font-family: 'Nunito', sans-serif;
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+  .title-text {
+    font-size: 30px;
+    padding-top: 15px;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .entire-wrapper {
+    height: 100vh;
+  }
+
+  
+  .end-info {
+    margin-top: 35vh;
+  }
+
+  .title{
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .first_button, .second_button {
+    margin: 20px;
+    height: 80px;
+    width: 180px;
+    font-size: 20px;
+  } 
+  
+  .title-text {
+    font-size: 30px;
+    padding-top: 40px;
+    font-family: 'Nunito', sans-serif;
+  }  
+
+}
+
+@media only screen and (max-width: 767px) {
+  .title-text {
+    font-size: 20px;
+    padding-top: 10px;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .title{
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .entire-wrapper {
+    height: 135vh;
+    overflow: hidden;
+  }
+
+  .end-info {
+    margin-top: 5vh;
+    font-size: 10px;
+  }
+  
+  .info {
+    text-align: justify;
+    width: 60%;
+    margin-left: 20%;
+  }
+}

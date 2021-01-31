@@ -1,0 +1,41 @@
+html
+  <!DOCTYPE html>
+  html(lang="en")
+    head
+      meta(charset="UTF-8")
+      meta(name="viewport", content="width=device-width, initial-scale=1.0")
+      link(rel='stylesheet', href='/stylesheets/index.css')
+     
+      link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous")
+      link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css")
+      link(href="https://fonts.googleapis.com/css2?family=Fraunces&family=Nunito:wght@300&display=swap" rel="stylesheet")
+      title Welcome!      
+    body
+      div.entire-wrapper
+        div.title 
+          h3.title-text Hello! Would you like to submit a person or view the list of people?
+        
+        div.button_div 
+          button(class="first_button" id="first-button") Submit a form
+          button(class="second_button" id="second-button") View the list
+        
+        div.info 
+          h4.submit Submitting a form:
+          
+          p.submit-para 
+            | - You'll be asked to fill out some information about the person 
+          
+          
+          br
+
+          h4.see_list Viewing the list: 
+          p.see_list_para - You'll be able to see the current list of people in the database.
+
+          br
+
+        div.end-info 
+          p.get-help If you have more questions, you can also go to the help page 
+            a(href="/help") here
+            
+      script(src="/javascripts/indexPage.js")

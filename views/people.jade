@@ -1,0 +1,27 @@
+html
+  <!DOCTYPE html>
+  html(lang="en")
+    head
+      meta(charset="UTF-8")
+      meta(name="viewport", content="width=device-width, initial-scale=1.0")
+      link(rel='stylesheet', href='/stylesheets/people.css')
+     
+      link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous")
+      link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css")
+      link(href="https://fonts.googleapis.com/css2?family=Fraunces&family=Nunito:wght@300&display=swap" rel="stylesheet")
+      title Help!      
+    body
+
+      div.wrapper 
+        div(class="d-flex justify-content-center") 
+          h3.title View the list of people
+          
+        
+        div(class="justify-content-center" id="list-of-people") 
+
+         
+        div(class="d-flex justify-content-center button-div") 
+          button(class="refresh btn btn-primary" id="refresh") Refresh
+        
+      script(src="/javascripts/people.js")
