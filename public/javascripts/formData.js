@@ -1,4 +1,11 @@
-
+/** 
+* Validates to make sure all fields are filled in. (currently does not check the text itself)
+* Sets the fields to empty afterwards.
+* Creates a js object with the inputs collected
+* Turns the object to json and sends it to the db
+* Logs the object to the console
+* Changes the visibility of the div under the form to be visible.
+*/
 function submission(e) {
   var name = document.getElementById("name").value
   var email = document.getElementById("email").value
@@ -34,7 +41,7 @@ function submission(e) {
   //alert(name + " " + email + " " + location)
 }
 
-
+// calls function when the form is submitted
 document.getElementById("submission").onclick = function (e) {
   submission(e);
 }
