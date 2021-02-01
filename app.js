@@ -39,28 +39,22 @@ app.use('/people', peopleRouter)
 
 
 app.post('/', function (req, res) {
-  // Prepare output in JSON format
-  //req.headers['content-type'] = 'application/json';
-  //console.log(req)
-  //alert("AAAAAAAAAAAAAAAAAAAAA");
-  //res.end(JSON.stringify(req.body));
-
   if (req.body.form) {
-    //console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa");
-    mongoClient.connect('mongodb+srv://sadman:sad2023@cluster0.xy7gp.mongodb.net/test?authSource=admin&replicaSet=atlas-596utp-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true',
+    //Note: the login details here are just placeholders.
+    mongoClient.connect('mongodb+srv://username:password@cluster0.xy7gp.mongodb.net/test?authSource=admin&replicaSet=atlas-596utp-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true',
       function (err, client) {
         var object = {
           list: []
         }
 
         var db = client.db('people');
-        //db.collection('peopleCollection').find().forEach(console.log)
+ 
         db.collection('peopleCollection').find({}).toArray().then((docs) => {
           object.list = docs
           console.log(JSON.stringify(object));
           res.end(JSON.stringify(object))
         })
-        //console.log(JSON.stringify(object))
+
       });
   }
 
@@ -72,9 +66,6 @@ app.post('/', function (req, res) {
         db.collection('peopleCollection', function (err, collection) {
 
           collection.insert(req.body);
-          //collection.insert({ name: 'Steve', email: 'steve123@gmail.com', location: "Washington D.C." });
-          //collection.insert({ name: 'Steve', email: 'steve123@gmail.com', location: "Washington D.C." });
-          //collection.insert({ name: 'Steve', email: 'steve123@gmail.com', location: "Washington D.C." });
         });
 
       });
