@@ -1,4 +1,6 @@
 var list_of_people = []
+
+// gets data from db and displays it on the page
 const getPeople = async (url) => {
   var json_object = JSON.stringify({ form: "yes" })
   fetch('/', {
@@ -20,11 +22,12 @@ const getPeople = async (url) => {
 
 };
 
+// calls function when window is loaded
 window.onload = function (e) {
   getPeople(e);
 }
 
-
+// reloads page when refresh button is clicked
 document.getElementById("refresh").onclick = function (e) {
   window.location.reload()
 }
