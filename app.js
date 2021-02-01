@@ -37,8 +37,9 @@ app.use('/form', formRouter);
 app.use('/people', peopleRouter)
 
 
-
+// handle post requests
 app.post('/', function (req, res) {
+  // handles requests from the 'people' page. Sends data from db back.
   if (req.body.form) {
     //Note: the login details here are just placeholders.
     mongoClient.connect('mongodb+srv://username:password@cluster0.xy7gp.mongodb.net/test?authSource=admin&replicaSet=atlas-596utp-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true',
@@ -57,7 +58,7 @@ app.post('/', function (req, res) {
 
       });
   }
-
+  // handles requests from the form page. Sends data to the db
   else {
     mongoClient.connect('mongodb+srv://sadman:sad2023@cluster0.xy7gp.mongodb.net/test?authSource=admin&replicaSet=atlas-596utp-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true',
       function (err, client) {
